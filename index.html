@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>InterviewMe</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>InterviewMe</h1>
+    </header>
+
+    <div class="container1">
+      <div class="one-liner">
+        <h2>Prepare for your interview like a pro!</h2>
+      </div>
+      <div class="instruction">
+        <p>
+          InterviewMe provides a platform to refine your interview skills.
+          Simply provide a list of questions you anticipate encountering during
+          an interview, and our voice assistant will read each question aloud
+          and await your response. Once you've finished responding, you can say
+          pre-defined cue word something like "next" to proceed to the following
+          question.
+        </p>
+      </div>
+      <button class="btn" onclick="removeElement()">Get Started</button>
+    </div>
+
+    <div class="container2 hide">
+      <div>
+        <video id="video"></video>
+        <p id="converted_voice_to_text">Captions</p>
+      </div>
+
+      <div>
+        <button id="start_interview" type="submit">Start interview</button>
+        <button id="stop_interview" type="submit" disabled>
+          Stop interview
+        </button>
+      </div>
+
+      <form action="">
+        <div>
+          <label for="enable_video">Enable Video</label>
+          <input
+            type="checkbox"
+            id="enable_video"
+            name="enable_video"
+            checked
+          />
+        </div>
+        <div>
+          <label for="enable_captions">Enable Captions</label>
+          <input
+            type="checkbox"
+            id="enable_captions"
+            name="enable_captions"
+            checked
+          />
+        </div>
+        <div>
+          <label for="voice_options">Voice</label>
+          <select id="voice_options"></select>
+        </div>
+        <div>
+          <label for="voice_speed">Voice Speed</label>
+          <input
+            type="range"
+            min="0.5"
+            max="2"
+            value="1"
+            step="0.1"
+            id="voice_speed"
+          />
+        </div>
+        <div>
+          <label for="voice_pitch">Voice Pitch</label>
+          <input
+            type="range"
+            min="0"
+            max="2"
+            value="1"
+            step="0.1"
+            id="voice_pitch"
+          />
+        </div>
+        <div>
+          <label for="start_with_intro">Start with your introduction?</label>
+          <input
+            type="checkbox"
+            id="start_with_intro"
+            name="start_with_intro"
+            checked
+          />
+        </div>
+        <div>
+          <label for="next_question_cue">Next Question Cue</label>
+          <input
+            type="text"
+            name="next_question_cue"
+            id="next_question_cue"
+            placeholder="*Next Question Cue"
+            required
+          />
+        </div>
+        <div id="questions">
+          <label for="questions">Questions</label>
+          <div>
+            <input
+              type="text"
+              name="question1"
+              placeholder="*Question 1"
+              required
+            />
+          </div>
+          <button
+            name="nextQuestion"
+            id="nextQuestion"
+            onclick="createNewQuestionField()"
+            type="button"
+          >
+            Add question
+          </button>
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
