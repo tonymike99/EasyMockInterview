@@ -422,7 +422,7 @@ function getUserName() {
 }
 
 function getAppName() {
-  return "InterviewMe";
+  return "EasyMockInterview";
 }
 
 function getRandomWord(arr) {
