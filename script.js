@@ -28,9 +28,9 @@ let i = 0;
 // ----------------------------------------------------------------------------------------------------
 
 const voicePreviewText = `Good ${getTimeOfDay()}!`;
-const question1 = `Hello ${getUserName()}! Good ${getTimeOfDay()}! I am ${getAppName()} and I will be taking your interview. Shall we start?`;
+const question1 = `Hello! Good ${getTimeOfDay()}! I am ${getAppName()} and I will be taking your interview. Shall we start?`;
 const question2 = `Can we start with your introduction?`;
-const questionLast = `We have come to the end of the interview. ${getUserName()}, it was nice to meet you. I can tell that you are a good candidate. Expect to hear from us within a week or so about the job. Thank you!`;
+const questionLast = `We have come to the end of the interview. It was nice to meet you. I can tell that you are a good candidate. Expect to hear from us within a week or so about the job. Thank you!`;
 const noQuestion = `You have not entered the list of questions.`;
 const noQuestionCue = `You have not entered the question cue.`;
 const lightAcknowledgmentWords = ["Cool", "Okay", "Good", "Fine", "Alright"];
@@ -415,10 +415,6 @@ function getTimeOfDay() {
   } else {
     return "evening";
   }
-}
-
-function getUserName() {
-  return "Tony";
 }
 
 function getAppName() {
